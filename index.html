@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NyumbaLoop – Find. View. Move in.</title>
+  <meta name="description" content="NyumbaLoop is a Kenya property discovery platform (MVP prototype). Search rentals in Nairobi and see exactly what has been checked before you contact an advertiser.">
+  <meta name="theme-color" content="#123047">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#/" aria-label="NyumbaLoop home">
+        <img src="assets/logo-mark.svg" width="30" height="34" alt="" aria-hidden="true">
+        <span>Nyumba<b>Loop</b></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="#/search" data-nav="search">Browse</a>
+        <a href="#/verification" data-nav="verification">How verification works</a>
+        <a href="#/safety" data-nav="safety">Safety centre</a>
+        <a href="#/list" data-nav="list">List your property</a>
+        <a href="#/saved" data-nav="saved">Saved <span id="savedCount" class="pill" hidden>0</span></a>
+        <span id="roleNav"></span>
+      </nav>
+      <label class="role-switch">
+        <span class="sr">Demo role</span>
+        <select id="roleSelect" aria-label="Switch demo role">
+          <option value="visitor">Visitor</option>
+          <option value="renter">Renter (Amina)</option>
+          <option value="advertiser">Agent (Wanjiku)</option>
+          <option value="moderator">Moderator</option>
+        </select>
+      </label>
+    </div>
+    <div class="demo-banner" role="note">Prototype: data is sample data stored in your browser only. No real listings, payments or deposits.</div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <div>
+        <strong>NyumbaLoop</strong> <span class="muted">· Find. View. Move in.</span>
+        <p>Accurate listings. Accountable advertisers. Clear information. Safer house hunting.</p>
+        <p class="muted small">View the property and confirm the details before making any payment. NyumbaLoop does not hold deposits or rent in this release. “NyumbaLoop” is a working name, subject to KIPI clearance.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#/about">About</a>
+        <a href="#/contact">Contact</a>
+        <a href="#/terms">Terms</a>
+        <a href="#/privacy">Privacy</a>
+        <a href="#/report">Report a listing</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close" id="modalClose" aria-label="Close dialog">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
